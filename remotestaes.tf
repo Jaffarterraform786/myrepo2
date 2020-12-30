@@ -1,3 +1,14 @@
+resource "aws_s3_bucket" "b" {
+  bucket = "goodmoody777"
+  acl    = "private"
+
+  tags = {
+    Name = "My bucket"
+  }
+}
+
+
+
 terraform {
   backend "s3" {
     bucket             = "kulfa777"
