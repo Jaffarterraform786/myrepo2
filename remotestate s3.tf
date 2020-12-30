@@ -7,7 +7,17 @@ resource "aws_s3_bucket" "b" {
   }
 }
 
-
+resource "aws_dynamodb_table" "example" {
+  name           = "example"
+  hash_key       = "LockID"
+  billing_mode   = "PROVISIONED"
+  read_capacity  = 20
+  write_capacity = 20
+  attribute {
+    type = "S"
+    name = "LockID"
+  }
+}
 
 terraform {
   backend "s3" {
