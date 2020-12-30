@@ -1,8 +1,8 @@
 provider "aws" {
   region     = "ap-south-1"
-  access_key = "AKIA6HVQRT7QSBAFVFP7"
-  secret_key = "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"
-}
+  access_key = "
+  secret_key = "
+  }
 provider "aws" {
   region = "us-east-1"
   alias  = "hello"
