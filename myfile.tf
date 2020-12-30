@@ -9,3 +9,10 @@ output "hello" {
   value = aws_instance.myec23.id
   }
   
+module "helloworld"
+{
+source = "./parentmoduleloaction”
+}
+output "vn" {
+Value = module.helloworld.Hello.id
+}
