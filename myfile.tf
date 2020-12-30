@@ -5,3 +5,7 @@ resource "aws_instance" "myec23" {
     name = "myec3"
   }
 }
+output "hello" {
+  value = aws_instance.myec23.id
+  }
+  
